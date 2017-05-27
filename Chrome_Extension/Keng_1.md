@@ -49,6 +49,9 @@ setItem问题
 json作为一种数据格式在这里是灰常方便的，这样便能把各种数据转换成json格式然后存储了，标签对象也能够存储进去了;  
 这样主要是能够借助 JSON.parse()方法恢复原来的数据格式;  
 
-`urls = JSON.parse(localStorage.getItem("Json"));`
+`urls = JSON.parse(localStorage.getItem("Json"));` 
+
+## one interesting thing  
+当采取第一种方式进行存储时，当进行多个窗口url的截取时，0,1,2等并不会被覆盖，而是i在最近一次的值+1，这样还是蛮有趣的!!!
 
 
