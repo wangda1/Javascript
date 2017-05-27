@@ -35,7 +35,7 @@ localStorage仅能存储字符串,也就是说在存储数据之前应当把数�
 
 setItem问题
 
- //localStorage.urls_array[i] = urls_array[i].url;                                   //存储活动标签   
+`localStorage.urls_array[i] = urls_array[i].url;                                   //存储活动标签`   
  这样存储会报错，报错在 i 那里，但在采取了 localStorage.setItem(i,urlr[i])便没有了错误    
  
 
@@ -44,11 +44,11 @@ setItem问题
 采取上述的数据存储方式，仅能在每一条存储一条url，前面的键值为数组序号，这样当存储多个窗口的url信息时就不便于区分，   
 因此便想到了用json，这样就能在一条数据内存储当前窗口的url信息了；  
 
-localStorage.setItem("Json",JSON.stringify(urls));   
+`localStorage.setItem("Json",JSON.stringify(urls));`   
 
 json作为一种数据格式在这里是灰常方便的，这样便能把各种数据转换成json格式然后存储了，标签对象也能够存储进去了;  
 这样主要是能够借助 JSON.parse()方法恢复原来的数据格式;  
 
-urls = JSON.parse(localStorage.getItem("Json"));
+`urls = JSON.parse(localStorage.getItem("Json"));`
 
 
